@@ -15,14 +15,10 @@ CRGB leds[NUM_LEDS];
 
 teensydmx::Receiver dmxRx{Serial1};
 
-// The last value on the channel, for knowing when to print a change
-// (Example 1).
-uint8_t lastValue = 0;
-
-// Buffer in which to store packet data (Example 2).
+// Buffer in which to store packet data.
 uint8_t packetBuf[NUM_LEDS * 3]{0};
 
-// The last values received on channels 10-12, initialized to zero.
+// The last values received, initialized to zero.
 uint8_t rgb[NUM_LEDS * 3]{0};
 
 
